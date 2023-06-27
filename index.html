@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissor's</title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="gameContainer">
-      <div class="gametitle">
-        <h1>Rock Paper Scissor's</h1>
-      </div>
-      <div class="content">
-        <section id="title">
-          <h1>Choose Your Choice!</h1>
-        </section>
-        <section id="display">
-          <div class="card">
-            <img src="images/rock.png" alt="rock.png" />
-            <button type="button" id="rock">Rock</button>
-          </div>
-          <div class="card">
-            <img src="images/Paper.png" alt="paper.png" />
-            <button type="button" id="rock">Paper</button>
-          </div>
-          <div class="card">
-            <img src="images/scissors.png" alt="scissors.png" />
-            <button type="button" id="rock">Scissor's</button>
-          </div>
-        </section>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gameContainer">
+    <div class="gameTitle">
+      <h1 id="gTitle">Rock Paper Scissors</h1>
     </div>
-  </body>
+    <div class="content">
+      <section id="title">
+        <h1>Choose Your Choice!</h1>
+      </section>
+      <section id="display">
+        <div class="card">
+          <img src="images/rock.png" alt="rock.png">
+          <button type="button" id="rock" onclick="playGame('rock')">Rock</button>
+        </div>
+        <div class="card">
+          <img src="images/paper.png" alt="paper.png">
+          <button type="button" id="paper" onclick="playGame('paper')">Paper</button>
+        </div>
+        <div class="card">
+          <img src="images/scissors.png" alt="scissors.png">
+          <button type="button" id="scissors" onclick="playGame('scissors')">Scissors</button>
+        </div>
+      </section>
+    </div>
+    <div class="scoreBoard">
+      <h1>First to 5 Wins!</h1>
+      <div class="scoreCard">
+        <div class="card" id="left">
+          <h2>Player 1 Score:</h2>
+          <input type="text" name="res1" id="player1">
+        </div>
+        <div class="card" id="right">
+          <h2>Computer Score:</h2>
+          <input type="text" name="res2" id="computer">
+        </div>
+      </div>
+      <div class="result">
+        <div id="score"></div>
+      </div>
+      <button type="button" id="reset" onclick="resetGame()">Reset</button>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
 </html>
