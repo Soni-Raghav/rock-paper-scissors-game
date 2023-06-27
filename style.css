@@ -118,3 +118,6 @@ input{
     border-color: beige;
     color: beige;
 }
+button:hover {
+  transform: scale(1.05);
+}
